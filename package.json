@@ -1,1 +1,27 @@
-{}
+{
+  "name": "preprocesadores",
+  "description": "Aprendiendo preprocesadores. Parte del curso de preprocesadores de Platzi.",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rgomeztinoco/preprocesadores.git"
+  },
+  "keywords": [
+    "pug",
+    "jade",
+    "sass",
+    "hatm",
+    "css"
+  ],
+  "author": "Ricardo Gómez <gricardo2213@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rgomeztinoco/preprocesadores/issues"
+  },
+  "homepage": "https://github.com/rgomeztinoco/preprocesadores#readme"
+}
