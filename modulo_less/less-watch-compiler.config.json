@@ -1,7 +1,7 @@
 {
-  "watchFolder": "<input_folder>",
-  "outputFolder": "<output_folder>",
-  "mainFile": "<main-file>",
+  "watchFolder": "less",
+  "outputFolder": "css",
+  "mainFile": "main.less",
   "includeHidden": false,
   "sourceMap": false,
   "plugins": "plugin1,plugin2",
