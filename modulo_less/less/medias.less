@@ -1,0 +1,40 @@
+@media screen {
+  @media (min-width: 600px) {
+    :root {
+      --fuente-base: 1.8rem;
+      --fuente-media: 2.4rem;
+      --fuente-grande: 3.5rem;
+    }
+    .intro {
+      height: calc(55vw - 25px);
+      &__imagen {
+        width: 90%;
+        margin-top: 5vw;
+        padding: 5px;
+        img {
+          display: block;
+        }
+      }
+      &__autor {
+        top: calc(35vw - 15px);
+      }
+    }
+  }
+  @media (min-width: 900px) {
+    :root {
+      --fuente-base: 2rem;
+      --fuente-media: 3rem;
+      --fuente-grande: 5rem;
+    }
+    .intro {
+      &__autor {
+        top: calc(10vw + 200px);
+        width: 200px;
+        img {
+          width: 75px;
+          height: 75px;
+        }
+      }
+    }
+  }
+}

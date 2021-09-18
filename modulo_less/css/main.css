@@ -1,10 +1,21 @@
 .sombra-caja {
-  box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 5px 15px 0px #000000;
 }
 .oswald {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--fuente-2);
   text-transform: uppercase;
   font-weight: 700;
+}
+:root {
+  --color-primario: #333333;
+  --color-claro: #ffffff;
+  --color-secundario: #8841da;
+  --color-variacion: #012179;
+  --fuente-1: "Lato", sans-serif;
+  --fuente-2: "Oswald", sans-serif;
+  --fuente-base: 1.6rem;
+  --fuente-media: 1.9rem;
+  --fuente-grande: 2.2rem;
 }
 * {
   box-sizing: border-box;
@@ -15,16 +26,16 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: "Lato", sans-serif;
-  color: #ffffff;
-  background-color: #333333;
-  font-size: 1.6rem;
-  line-height: 2.6rem;
+  font-family: var(--fuente-1);
+  color: var(--color-claro);
+  background-color: var(--color-primario);
+  font-size: var(--fuente-base);
+  line-height: calc(var(--fuente-base) + 1rem);
 }
 h1,
 h2,
 h3 {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--fuente-2);
   text-transform: uppercase;
   font-weight: 700;
 }
@@ -41,14 +52,14 @@ h3 {
   left: 0;
   top: 0;
   right: 0;
+  max-width: 1100px;
   width: 100%;
   margin: 0 auto;
-  background-color: #8841da;
-  box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.25);
+  background-color: var(--color-secundario);
+  box-shadow: 0px 5px 15px 0px #000000;
 }
 .intro__imagen img {
   width: 100%;
-  height: auto;
   object-fit: cover;
 }
 .intro__contenido {
@@ -60,21 +71,22 @@ h3 {
   width: 100%;
   margin: 0 auto;
   text-align: center;
-  color: #ffffff;
+  color: var(--color-claro);
 }
 .intro__categoria {
-  font-family: "Oswald", sans-serif;
+  font-family: var(--fuente-2);
   text-transform: uppercase;
   font-weight: 700;
   color: rgba(255, 255, 255, 0.5);
 }
 .intro__titulo {
+  max-width: 750px;
   width: 80vw;
   margin: 0 auto;
-  font-family: "Oswald", sans-serif;
+  font-family: var(--fuente-2);
   text-transform: uppercase;
-  font-size: 2.2rem;
-  line-height: 3.2rem;
+  font-size: var(--fuente-grande);
+  line-height: calc(var(--fuente-grande) + 1rem);
 }
 .intro__autor {
   width: 150px;
@@ -83,7 +95,7 @@ h3 {
   top: calc(50vw + 5px);
   left: 0;
   right: 0;
-  color: #ffffff;
+  color: var(--color-claro);
 }
 .intro__autor img {
   width: 50px;
@@ -104,18 +116,18 @@ h3 {
   margin: 0 auto;
 }
 .articulo--principal__intro {
-  font-size: 1.9rem;
-  line-height: 2.9rem;
+  font-size: var(--fuente-media);
+  line-height: calc(var(--fuente-media) + 1rem);
   margin-bottom: 15px;
 }
 .articulo--principal h2 {
   margin: 40px 0 40px 0;
   text-align: center;
-  font-size: 2.2rem;
-  line-height: 3.2rem;
+  font-size: var(--fuente-grande);
+  line-height: calc(var(--fuente-grande) + 1rem);
 }
 .articulo--principal h3 {
-  color: #8841da;
+  color: var(--color-secundario);
   margin-top: 15px;
   margin-bottom: 15px;
 }
@@ -130,7 +142,7 @@ h3 {
 }
 .caja {
   max-width: 350px;
-  box-shadow: 0px 5px 15px 0px rgba(51, 51, 51, 0.25);
+  box-shadow: 0px 5px 15px 0px #000000;
 }
 .caja__imagen img {
   display: block;
@@ -138,18 +150,54 @@ h3 {
 }
 .caja__contenido {
   padding: 25px;
-  background-color: #8841da;
+  background-color: var(--color-secundario);
 }
 .caja span {
-  color: #ffffff;
-  font-family: "Oswald", sans-serif;
+  color: var(--color-claro);
+  font-family: var(--fuente-2);
   text-transform: uppercase;
   font-weight: 700;
 }
 .caja a {
   text-decoration: none;
-  color: #ffffff;
-  font-family: "Oswald", sans-serif;
+  color: var(--color-claro);
+  font-family: var(--fuente-2);
   text-transform: uppercase;
   font-weight: 700;
+}
+@media screen and (min-width: 600px) {
+  :root {
+    --fuente-base: 1.8rem;
+    --fuente-media: 2.4rem;
+    --fuente-grande: 3.5rem;
+  }
+  .intro {
+    height: calc(55vw - 25px);
+  }
+  .intro__imagen {
+    width: 90%;
+    margin-top: 5vw;
+    padding: 5px;
+  }
+  .intro__imagen img {
+    display: block;
+  }
+  .intro__autor {
+    top: calc(35vw - 15px);
+  }
+}
+@media screen and (min-width: 900px) {
+  :root {
+    --fuente-base: 2rem;
+    --fuente-media: 3rem;
+    --fuente-grande: 5rem;
+  }
+  .intro__autor {
+    top: calc(10vw + 200px);
+    width: 200px;
+  }
+  .intro__autor img {
+    width: 75px;
+    height: 75px;
+  }
 }

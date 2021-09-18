@@ -3,16 +3,18 @@
   width: 80vw;
   margin: 0 auto;
   &__intro {
-    .fuente(@fuente-media);
+    font-size: var(--fuente-media);
+    line-height: calc(var(--fuente-media) + 1rem);
     margin-bottom: 15px;
   }
   h2 {
     margin: 40px 0 40px 0;
     text-align: center;
-    .fuente(@fuente-grande);
+    font-size: var(--fuente-grande);
+    line-height: calc(var(--fuente-grande) + 1rem);
   }
   h3 {
-    color: @color-secundario;
+    color: var(--color-secundario);
     margin-top: 15px;
     margin-bottom: 15px;
   }
