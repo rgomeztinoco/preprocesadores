@@ -1,8 +1,12 @@
 .contenedor--cajas {
   width: 90%;
   margin: 0 auto;
+  margin-bottom: 25px;
   display: flex;
   justify-content: space-evenly;
+  // flex-direction: column;
+  flex-wrap: wrap;
+  gap: 25px;
 }
 .caja {
   max-width: 430px;
@@ -12,12 +16,15 @@
   }
   span {
     color: @color-secundario;
+    .oswald;
   }
   a {
     text-decoration: none;
     color: @color-variacion;
+    .oswald;
   }
   img {
     width: 100%;
   }
+  .sombra-caja;
 }
