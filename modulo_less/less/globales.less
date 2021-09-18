@@ -4,6 +4,11 @@
 @color-variacion: #012179;
 @fuente-1: "Lato", sans-serif;
 @fuente-2: "Oswald", sans-serif;
+@fuente-base: 1.6rem;
+@fuente-media: 1.8rem;
+.sombra-caja {
+  box-shadow: 0px 5px 15px 0px fade(@color-primario, 10%);
+}
 * {
   box-sizing: border-box;
   margin: 0;
@@ -15,6 +20,8 @@ html {
 body {
   font-family: @fuente-1;
   color: @color-primario;
+  font-size: @fuente-base;
+  line-height: @fuente-base + 1%;
 }
 h1,
 h2,

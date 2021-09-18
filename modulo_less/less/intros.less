@@ -2,7 +2,7 @@
   position: relative;
   width: 100%;
   max-height: 650px;
-  height: calc(50vw + 50px);
+  height: calc(50vw + 75px);
   padding: 10px;
   margin: 0 auto;
   &__imagen {
@@ -32,22 +32,23 @@
   &__categoria {
     font-family: @fuente-2;
     text-transform: uppercase;
+    color: fade(@color-claro, 50%);
   }
   &__titulo {
     width: 80vw;
     margin: 0 auto;
     font-family: @fuente-2;
     text-transform: uppercase;
-    font-size: 2rem;
+    font-size: @fuente-media;
   }
   &__autor {
     width: 150px;
     margin: 0 auto;
     position: absolute;
-    top: calc(5vw + 110px);
+    top: calc(20vw + 100px);
     left: 0;
     right: 0;
-    color: @color-claro;
+    color: @color-primario;
     img {
       width: 50px;
       height: 50px;
@@ -57,6 +58,9 @@
     }
     span {
       display: inline-block;
+    }
+    &-titulo {
+      color: fade(@color-primario, 50%);
     }
   }
 }
