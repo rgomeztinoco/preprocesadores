@@ -1,0 +1,29 @@
+.galeria {
+  display: flex;
+  flex-wrap: wrap;
+  width: 90%;
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+  @include caja;
+  &__fotos-adicionales {
+    max-width: 180px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    img {
+      height: 70px;
+      margin: 5px;
+    }
+  }
+  h2 {
+    width: 100%;
+    margin-bottom: 20px;
+    @extend .perfil__nombre;
+  }
+  img {
+    border-radius: 10px;
+  }
+}
