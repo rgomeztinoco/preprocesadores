@@ -1,0 +1,24 @@
+.articulos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 75px;
+  width: 100%;
+  padding: 50px;
+  color: var(--color-primario);
+}
+.articulo {
+  border-bottom: 3px solid var(--color-secundario);
+  &__categoria {
+    font-weight: 500;
+    font-size: 1.6rem;
+    color: var(--color-secundario);
+    @include titulos($fuente-2)
+  }
+  &__titulo {
+    @include titulos($fuente-2)
+  }
+  &__descripcion {
+    margin-bottom: 30px;
+  }
+}

@@ -1,10 +1,30 @@
 :root {
   --color-primario: #333333;
   --color-primario-rgb: 51, 51, 51;
-  --color-claro: #FFFFFF;
+  --color-claro: #ffffff;
   --color-claro-rgb: 255, 255, 255;
   --color-secundario: #8841da;
   --color-variacion: #3f579a;
+}
+
+h1 {
+  font-size: 3rem;
+  line-height: 4rem;
+}
+
+h2 {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+}
+
+p {
+  font-size: 1.6rem;
+  line-height: 2.6rem;
 }
 
 * {
@@ -40,18 +60,17 @@ main {
   border-radius: 50em;
 }
 .perfil__nombre, .galeria h2, .perfil__minibio h2 {
-  text-transform: uppercase;
+  margin-top: 10px;
   text-align: center;
-  font-size: 2rem;
   font-weight: 600;
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 .perfil__titulo, .perfil__minibio h3 {
   display: block;
   text-transform: uppercase;
   text-align: center;
   font-weight: 700;
-  font-size: 1.2rem;
   color: rgba(var(--color-claro-rgb), 0.5);
 }
 .perfil__boton {
@@ -62,9 +81,9 @@ main {
   padding-top: 12px;
   border-radius: 20px;
   text-decoration: none;
-  text-transform: uppercase;
   text-align: center;
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
   color: var(--color-claro);
   background-color: rgba(var(--color-primario-rgb), 0.2);
   border: 2px solid rgba(var(--color-claro-rgb), 0.3);
@@ -76,6 +95,7 @@ main {
 .estadistica--perfil {
   display: flex;
   width: 90%;
+  max-width: 400px;
   height: 90px;
   padding-top: 20px;
   margin: 0 auto;
@@ -85,47 +105,47 @@ main {
   border-radius: 20px;
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.5);
 }
-.estadistica--perfil h3 {
+.estadistica--perfil h2 {
   font-weight: 600;
-  font-size: 2rem;
   text-align: center;
-  text-transform: uppercase;
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 .estadistica--perfil span {
   font-size: 1.2rem;
   text-align: center;
-  text-transform: uppercase;
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 
 .ubicacion--perfil {
+  position: relative;
   width: 90%;
+  max-width: 400px;
   height: 90px;
   margin: 30px auto 0 auto;
-  padding: 20px 0 0 50px;
+  padding: 20px;
   color: var(--color-primario);
   background-color: var(--color-claro);
   border-radius: 20px;
   box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.5);
+  text-align: center;
 }
 .ubicacion--perfil i {
-  display: block;
-  float: left;
+  position: absolute;
+  left: calc(50% - 110px);
   padding-right: 10px;
   font-size: 4rem;
   color: var(--color-variacion);
 }
 .ubicacion--perfil h2 {
-  text-transform: uppercase;
   font-weight: 600;
-  font-size: 20px;
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
 }
 .ubicacion--perfil h3 {
-  text-transform: uppercase;
-  font-size: 1.2rem;
   font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
   color: rgba(var(--color-primario-rgb), 0.5);
 }
 
@@ -159,6 +179,44 @@ main {
 }
 .galeria img {
   border-radius: 10px;
+}
+
+.articulos {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  gap: 75px;
+  width: 100%;
+  padding: 50px;
+  color: var(--color-primario);
+}
+
+.articulo {
+  border-bottom: 3px solid var(--color-secundario);
+}
+.articulo__categoria {
+  font-weight: 500;
+  font-size: 1.6rem;
+  color: var(--color-secundario);
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.articulo__titulo {
+  font-family: "Oswald", sans-serif;
+  text-transform: uppercase;
+}
+.articulo__descripcion {
+  margin-bottom: 30px;
+}
+
+@media screen and (min-width: 720px) {
+  .perfil {
+    width: 50%;
+  }
+
+  .articulos {
+    width: 50%;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

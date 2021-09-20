@@ -1,9 +1,9 @@
-$fuente-1: 'Lato', sans-serif;
-$fuente-2: 'Oswald', sans-serif;
+$fuente-1: "Lato", sans-serif;
+$fuente-2: "Oswald", sans-serif;
 :root {
   --color-primario: #333333;
   --color-primario-rgb: 51, 51, 51;
-  --color-claro: #FFFFFF;
+  --color-claro: #ffffff;
   --color-claro-rgb: 255, 255, 255;
   --color-secundario: #8841da;
   --color-variacion: #3f579a;
@@ -12,10 +12,24 @@ $fuente-2: 'Oswald', sans-serif;
   color: var(--color-primario);
   background-color: var(--color-claro);
   border-radius: 20px;
-  box-shadow: 0 20px 30px 0 rgba(0,0,0,0.50);
+  box-shadow: 0 20px 30px 0 rgba(0, 0, 0, 0.5);
+}
+@mixin titulos($fuente) {
+  @if $fuente==$fuente-1 {
+    font-family: $fuente-1;
+  } @else {
+    font-family: $fuente-2;
+    text-transform: uppercase;
+  }
 }
 @function get-opacity($color, $nivel) {
-  @return rgba($color, $nivel)
+  @return rgba($color, $nivel);
+}
+@each $header, $size in (h1: 3rem, h2: 2rem, h3: 1.2rem, p: 1.6rem) {
+  #{$header} {
+    font-size: $size;
+    line-height: $size + 1rem;
+  }
 }
 * {
   box-sizing: border-box;
@@ -26,7 +40,7 @@ html {
   font-size: 62.5%;
 }
 body {
-  font-family: $fuente-1;
+  @include titulos($fuente-1);
 }
 main {
   display: flex;
