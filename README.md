@@ -1,3 +1,6 @@
 # Preprocesadores
-Aprendiendo preprocesadores.
-Parte del curso de preprocesadores de Platzi.
+Ejercicios del curso de preprocesadores de Platzi.
+## Módulos
+- Pug
+- Less
+- Sass
