@@ -4,3 +4,4 @@ Ejercicios del curso de preprocesadores de Platzi.
 - Pug
 - Less
 - Sass
+- Stylus
